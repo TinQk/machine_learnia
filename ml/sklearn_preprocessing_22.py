@@ -109,17 +109,16 @@ print(scaler.fit_transform(X))
 
 
 ### Autres transformer :
-    # polynomial feature --> crée des polygones a partir des datas
-    # power transform --> donne des datas normales ou gaussiennes
     
+# polynomial feature --> crée des polygones a partir des datas
+# power transform --> donne des datas normales ou gaussiennes
+
 # discretisation des données :
     # Binarizer
     # Kbindescretizer
     
 # Transformer personnalisable : FunctionTransformer
     
-
-
 
 # Imputation --> remplacer certaines valeurs manquantes par des stats
 

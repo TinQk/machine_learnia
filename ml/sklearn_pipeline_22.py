@@ -45,3 +45,15 @@ model = make_pipeline(StandardScaler(),
 
 model.fit(X_train, y_train)
 print(model.predict(X_test))
+
+
+# On peut étudier les paramètres d'un pipeline comme ceux d'un model avec GridSearchCv
+from sklearn.model_selection import GridSearchCV
+params = {
+    'kneighborsclassifier__n_neighbors': [5,10,15]  
+    }
+grid = GridSearchCV(model, param_grid = params, cv=4)
+
+grid.fit(X_train, y_train)
+print(grid.best_params_)
+print(grid.score(X_test, y_test))

@@ -1,0 +1,52 @@
+ANALYSE DE FORME
+
+Target : SARS-Cov-2 exam result
+
+5644 x 111
+--> 70 variables qualitatives 
+--> 41 variables quantitatives
+
+beaucoup de valeurs manquantes
+2 groupes de données à analyser : 
+76% manquantes --> test autres virus
+89% manquantes --> analyse sanguines globules
+
+On a éliminé les colonnes avec + de 90% de données manquantes.
+
+
+ANALYSE DE FOND
+
+Cas négatifs : 5086
+Cas positifs : 558
+negative    0.901134
+positive    0.098866
+
+"Patient age quantile" est difficilement interprétable, la donnée a déjà été travaillée mais comment ??
+
+Toutes les variables qualitatives sont binaires, la variable rhinovirus comprend plus de positif que les autres
+
+ANALYSE DE LA RELATION VARIABLE-TARGET
+
+BLOOD
+Il semblerait que entre les cas positifs et les cas negatifs :
+- le nombre de platelets serait différent
+- le nombre de leukocytes serait différent
+- le nombre de Monocytes serait différent
+--> hypothèses à tester
+
+AGE
+il semblerait que les individus les plus jeunes sont moins touchés mais données peu fiables
+
+VIRAL
+Pas vraiment de relation apparente a
+
+
+ANALYSE PLUS POUSSEE
+
+blood_data / blood_data : certaines variables sont très corrélées
+age / df : pas de corrélation particulière
+est malade / blood data : les taux sanguins entre malades et covid 19 sont un peu différents
+hospitalisation / est malade :
+hospitalisation / blood : intéressant si on essaie de prédire dans quel servce un patient doit aller suivant ses taux sanguins
+
+
